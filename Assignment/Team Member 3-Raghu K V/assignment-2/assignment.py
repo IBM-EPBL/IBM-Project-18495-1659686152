@@ -14,7 +14,7 @@ def insertTableData(conn,rollno,username,email,password):
 
 
 def updateTableData(conn,rollno,username,email,password):
-    sql ="UPDATE userdetails SET (username,email,password)=('{}','{}','{}') WHERE rollno={}".format(username,email,password,rollno)
+    sql = "UPDATE userdetails SET (username,email,password)=('{}','{}','{}') WHERE rollno={}".format(username,email,password,rollno)
     out = ibm_db.exec_immediate(conn, sql)
     print('Number of affected rows : ', ibm_db.num_rows(out), "\n")
 
